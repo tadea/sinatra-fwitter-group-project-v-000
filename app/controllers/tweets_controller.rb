@@ -20,7 +20,7 @@ class TweetsController < ApplicationController
     if !logged_in?
       redirect to '/login'
     elsif logged_in? && @user.tweets.include?(@tweet)
-      erb :"tweets/edit_tweet"
+      erb :"tweets/edit"
     else
       redirect to '/tweets'
     end
