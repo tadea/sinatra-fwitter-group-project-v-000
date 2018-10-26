@@ -64,7 +64,7 @@ class TweetsController < ApplicationController
     end
     redirect to "/tweets/#{@tweet.id}"
   end
-  
+
    patch '/tweets/:id' do
     @tweet = Tweet.find_by(params[:id])
     @user = User.find_by(id: session[:user_id])
